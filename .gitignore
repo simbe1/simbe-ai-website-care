@@ -1,0 +1,10 @@
+# Build artifacts
+*.zip
+
+# WordPress.org SVN checkout (nested)
+simbe-ai-website-care/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log

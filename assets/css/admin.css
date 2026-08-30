@@ -1,0 +1,338 @@
+/**
+ * Simbe AI Website Care — admin styles.
+ */
+
+.simbe-care-wrap {
+	max-width: 1100px;
+}
+
+.simbe-care-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin: 12px 0 20px;
+}
+
+.simbe-care-title {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.simbe-care-title h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	line-height: 1.3;
+}
+
+.simbe-care-subtitle {
+	margin: 4px 0 0;
+	color: #646970;
+}
+
+.simbe-care-logo {
+	width: 34px;
+	height: 34px;
+	font-size: 34px;
+	color: #d63638;
+}
+
+.simbe-care-actions {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.simbe-care-last {
+	color: #646970;
+	font-size: 12px;
+}
+
+.simbe-care-rescan.is-busy {
+	pointer-events: none;
+}
+
+/* Cards */
+.simbe-care-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 14px;
+	margin-bottom: 20px;
+}
+
+.simbe-care-card {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 14px 16px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.simbe-care-card .dashicons {
+	color: #2271b1;
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+}
+
+.simbe-care-card-value {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.simbe-care-card-label {
+	color: #646970;
+	font-size: 12px;
+}
+
+/* Sections */
+.simbe-care-section {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 18px 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.simbe-care-section-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.simbe-care-section h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+.simbe-care-section-sub {
+	color: #646970;
+	font-size: 12px;
+}
+
+.simbe-care-note {
+	background: #f6f7f7;
+	border-left: 4px solid #dcdcde;
+	padding: 8px 12px;
+	margin: 8px 0 14px;
+	font-size: 12px;
+	color: #50575e;
+}
+
+.simbe-care-note-warn {
+	border-left-color: #f0b849;
+}
+
+.simbe-care-summary {
+	display: flex;
+	gap: 14px;
+	font-size: 13px;
+}
+
+.simbe-care-summary-item.is-critical { color: #b32d2e; font-weight: 600; }
+.simbe-care-summary-item.is-warning { color: #d63638; font-weight: 600; }
+.simbe-care-summary-item.is-ok { color: #00a32a; font-weight: 600; }
+
+.simbe-care-empty {
+	color: #646970;
+}
+
+/* Table */
+.simbe-care-table {
+	margin-top: 10px;
+}
+
+.simbe-care-table th {
+	font-weight: 600;
+}
+
+.simbe-care-plugin {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.simbe-care-meta {
+	color: #646970;
+	font-size: 11px;
+}
+
+.simbe-care-badge {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	white-space: nowrap;
+}
+
+.simbe-care-badge.is-critical { background: #fcf0f1; color: #b32d2e; border: 1px solid #e65054; }
+.simbe-care-badge.is-warning { background: #fcf9e8; color: #996800; border: 1px solid #f0c33c; }
+.simbe-care-badge.is-ok { background: #edfaef; color: #008a20; border: 1px solid #68de7c; }
+
+.simbe-care-chip {
+	display: inline-block;
+	margin: 2px 4px 2px 0;
+	padding: 2px 8px;
+	border-radius: 4px;
+	font-size: 11px;
+	line-height: 1.6;
+	border: 1px solid #dcdcde;
+	background: #f6f7f7;
+	color: #3c434a;
+}
+
+.simbe-care-chip.is-critical { background: #fcf0f1; border-color: #e65054; color: #b32d2e; }
+.simbe-care-chip.is-warning { background: #fcf9e8; border-color: #f0c33c; color: #996800; }
+.simbe-care-chip.is-ok { background: #edfaef; border-color: #68de7c; color: #008a20; }
+.simbe-care-chip.is-active { background: #edfaef; border-color: #68de7c; color: #008a20; }
+.simbe-care-chip.is-inactive { color: #646970; }
+
+.simbe-care-details-toggle {
+	color: #2271b1;
+	font-size: 12px;
+	margin-left: 4px;
+}
+
+.simbe-care-details-row td {
+	padding: 0 !important;
+}
+
+.simbe-care-details {
+	background: #f6f7f7;
+	border-top: 1px solid #dcdcde;
+	padding: 10px 16px;
+	display: none;
+}
+
+.simbe-care-details.is-open {
+	display: block;
+}
+
+.simbe-care-details ul {
+	margin: 0;
+	list-style: disc;
+	padding-left: 20px;
+}
+
+.simbe-care-details li {
+	margin: 4px 0;
+	font-size: 12px;
+}
+
+/* Issues */
+.simbe-care-issues {
+	margin: 0;
+}
+
+.simbe-care-issue {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 12px 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.simbe-care-issue:last-child {
+	border-bottom: 0;
+}
+
+.simbe-care-issue-icon {
+	flex: 0 0 22px;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+}
+
+.simbe-care-issue.is-ok .simbe-care-issue-icon { color: #00a32a; }
+.simbe-care-issue.is-warning .simbe-care-issue-icon { color: #f0c33c; }
+.simbe-care-issue.is-critical .simbe-care-issue-icon { color: #b32d2e; }
+.simbe-care-issue.is-info .simbe-care-issue-icon { color: #2271b1; }
+
+.simbe-care-issue-body {
+	flex: 1;
+}
+
+.simbe-care-issue-title {
+	display: block;
+}
+
+.simbe-care-issue-desc {
+	margin: 4px 0 0;
+	color: #646970;
+	font-size: 12px;
+}
+
+.simbe-care-issue-fix {
+	margin: 4px 0 0;
+	font-size: 12px;
+}
+
+.simbe-care-fix-label {
+	font-weight: 600;
+}
+
+.simbe-care-issue-badge {
+	flex: 0 0 auto;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.simbe-care-issue-badge.is-ok { background: #edfaef; color: #008a20; }
+.simbe-care-issue-badge.is-warning { background: #fcf9e8; color: #996800; }
+.simbe-care-issue-badge.is-critical { background: #fcf0f1; color: #b32d2e; }
+.simbe-care-issue-badge.is-info { background: #f0f6fc; color: #2271b1; }
+
+/* Settings */
+.simbe-care-settings form {
+	max-width: 620px;
+}
+
+.simbe-care-settings .form-table th {
+	width: 220px;
+}
+
+/* Dashboard widget */
+.simbe-care-widget-stats {
+	display: flex;
+	gap: 18px;
+	margin: 8px 0;
+}
+
+.simbe-care-widget-stat {
+	display: flex;
+	flex-direction: column;
+	font-size: 12px;
+	color: #646970;
+}
+
+.simbe-care-widget-stat strong {
+	font-size: 22px;
+	line-height: 1.2;
+}
+
+.simbe-care-widget-stat.is-critical strong { color: #b32d2e; }
+.simbe-care-widget-stat.is-warning strong { color: #d63638; }
+.simbe-care-widget-stat.is-ok strong { color: #00a32a; }
+
+.simbe-care-widget-link {
+	margin: 8px 0 0;
+}

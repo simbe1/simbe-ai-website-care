@@ -3,7 +3,7 @@
  * Plugin Name:       Simbe AI Website Care
  * Plugin URI:        https://wordpress.org/plugins/simbe-ai-website-care/
  * Description:       Monitors your WordPress site for plugin and theme vulnerabilities, flags common issues, and gives freelancers and agencies a clear health overview for every site they manage.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Simbe1
@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SIMBE_CARE_VERSION', '1.1.0' );
+define( 'SIMBE_CARE_VERSION', '1.2.0' );
 define( 'SIMBE_CARE_PLUGIN_FILE', __FILE__ );
 define( 'SIMBE_CARE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SIMBE_CARE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

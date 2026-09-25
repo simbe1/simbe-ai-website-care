@@ -60,6 +60,8 @@ class Simbe_Care_Issues {
 			self::check_core_updates(),
 			self::check_memory_limit(),
 			self::check_unused_themes(),
+			self::check_security_headers(),
+			self::check_exposed_files(),
 		);
 	}
 
@@ -515,6 +517,176 @@ class Simbe_Care_Issues {
 			),
 			'recommendation' => __( 'Delete themes that are no longer in use from Appearance > Themes.', 'simbe-ai-website-care' ),
 		);
+	}
+
+	/**
+	 * Security headers should be present on the site.
+	 *
+	 * Makes a loopback HEAD request and verifies common hardening headers.
+	 * Results are cached for an hour so the check is not performed on every view.
+	 *
+	 * @return array
+	 */
+	private static function check_security_headers() {
+		$headers = self::fetch_security_headers();
+
+		if ( null === $headers ) {
+			return array(
+				'id'             => 'security_headers',
+				'severity'       => 'info',
+				'title'          => __( 'Security headers could not be verified', 'simbe-ai-website-care' ),
+				'description'    => __( 'The plugin could not reach this site over HTTP to inspect its response headers, so the security headers check was skipped.', 'simbe-ai-website-care' ),
+				'recommendation' => __( 'Confirm the site responds correctly over HTTP(S) and run the check again.', 'simbe-ai-website-care' ),
+			);
+		}
+
+		$missing = array();
+
+		if ( is_ssl() && empty( $headers['strict-transport-security'] ) ) {
+			$missing[] = __( 'Strict-Transport-Security (HSTS)', 'simbe-ai-website-care' );
+		}
+
+		if ( empty( $headers['x-content-type-options'] ) || false === stripos( (string) $headers['x-content-type-options'], 'nosniff' ) ) {
+			$missing[] = 'X-Content-Type-Options: nosniff';
+		}
+
+		$frame_protected = ! empty( $headers['x-frame-options'] )
+			|| ( ! empty( $headers['content-security-policy'] ) && false !== stripos( (string) $headers['content-security-policy'], 'frame-ancestors' ) );
+
+		if ( ! $frame_protected ) {
+			$missing[] = __( 'frame protection (X-Frame-Options or CSP frame-ancestors)', 'simbe-ai-website-care' );
+		}
+
+		if ( empty( $headers['referrer-policy'] ) ) {
+			$missing[] = 'Referrer-Policy';
+		}
+
+		if ( empty( $headers['content-security-policy'] ) ) {
+			$missing[] = 'Content-Security-Policy';
+		}
+
+		if ( empty( $missing ) ) {
+			return self::pass( 'security_headers', __( 'Security headers are present.', 'simbe-ai-website-care' ) );
+		}
+
+		return array(
+			'id'             => 'security_headers',
+			'severity'       => 'warning',
+			'title'          => sprintf(
+				/* translators: %d: number of missing security headers. */
+				_n( 'A security header is missing or weak', '%d security headers are missing or weak', count( $missing ), 'simbe-ai-website-care' ),
+				count( $missing )
+			),
+			'description'    => sprintf(
+				/* translators: %s: comma-separated list of missing headers. */
+				__( 'The following security headers were not found: %s.', 'simbe-ai-website-care' ),
+				implode( ', ', $missing )
+			),
+			'recommendation' => __( 'Add the missing headers at the server level (e.g. .htaccess, your nginx/Apache config, or a security plugin such as Really Simple SSL).', 'simbe-ai-website-care' ),
+		);
+	}
+
+	/**
+	 * Publicly accessible sensitive files can leak data.
+	 *
+	 * Looks for debug.log files, database dumps in web-accessible directories,
+	 * and backup copies of wp-config.php in the site root.
+	 *
+	 * @return array
+	 */
+	private static function check_exposed_files() {
+		$found = array();
+
+		$log_path = WP_CONTENT_DIR . '/debug.log';
+		if ( @is_file( $log_path ) && is_readable( $log_path ) ) { // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+			$found[] = 'wp-content/debug.log';
+		}
+
+		$uploads = wp_upload_dir();
+		$dirs    = array_unique(
+			array(
+				WP_CONTENT_DIR,
+				isset( $uploads['basedir'] ) ? $uploads['basedir'] : WP_CONTENT_DIR,
+			)
+		);
+
+		foreach ( $dirs as $dir ) {
+			foreach ( array( '*.sql', '*.sql.gz', '*.db' ) as $pattern ) {
+				foreach ( (array) glob( $dir . '/' . $pattern ) as $file ) {
+					$found[] = str_replace( ABSPATH, '', wp_normalize_path( $file ) );
+				}
+			}
+		}
+
+		foreach ( (array) glob( ABSPATH . 'wp-config.*' ) as $file ) {
+			$name = wp_basename( $file );
+			if ( in_array( $name, array( 'wp-config.php', 'wp-config-sample.php' ), true ) ) {
+				continue;
+			}
+			$found[] = $name;
+		}
+
+		$found = array_values( array_unique( $found ) );
+
+		if ( empty( $found ) ) {
+			return self::pass( 'exposed_files', __( 'No exposed sensitive files were found.', 'simbe-ai-website-care' ) );
+		}
+
+		$display  = array_slice( $found, 0, 5 );
+		$omitted  = count( $found ) - count( $display );
+
+		return array(
+			'id'             => 'exposed_files',
+			'severity'       => 'warning',
+			'title'          => sprintf(
+				/* translators: %d: number of exposed files. */
+				_n( 'An exposed sensitive file was found', '%d exposed sensitive files were found', count( $found ), 'simbe-ai-website-care' ),
+				count( $found )
+			),
+			'description'    => sprintf(
+				/* translators: 1: list of exposed files, 2: number of additional files not listed. */
+				__( 'These files may be publicly accessible and can leak data: %1$s%2$s', 'simbe-ai-website-care' ),
+				implode( ', ', $display ),
+				0 < $omitted ? sprintf( /* translators: %d: number of omitted files. */ __( ' (and %d more)', 'simbe-ai-website-care' ), $omitted ) : ''
+			),
+			'recommendation' => __( 'Remove database dumps and debug logs from web-accessible directories and store them outside the document root or in a private backup location.', 'simbe-ai-website-care' ),
+		);
+	}
+
+	/**
+	 * Fetches and normalizes the site's response headers.
+	 *
+	 * @return string[]|null Headers keyed by lowercase name, or null on failure.
+	 */
+	private static function fetch_security_headers() {
+		$key    = 'simbe_care_headers_' . md5( home_url( '/' ) );
+		$cached = get_transient( $key );
+
+		if ( is_array( $cached ) ) {
+			return $cached;
+		}
+
+		$response = wp_remote_head(
+			home_url( '/' ),
+			array(
+				'timeout'    => 10,
+				'redirection' => 5,
+			)
+		);
+
+		if ( is_wp_error( $response ) ) {
+			return null;
+		}
+
+		$all    = wp_remote_retrieve_headers( $response );
+		$flat   = array();
+		foreach ( $all as $name => $value ) {
+			$flat[ strtolower( $name ) ] = is_array( $value ) ? implode( ', ', $value ) : (string) $value;
+		}
+
+		set_transient( $key, $flat, HOUR_IN_SECONDS );
+
+		return $flat;
 	}
 
 	/**

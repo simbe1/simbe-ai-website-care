@@ -1,0 +1,1052 @@
+# Copyright (C) 2026 Simbe AI Website Care Contributors
+# This file is distributed under the same license as the Simbe AI Website Care plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Simbe AI Website Care 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/simbe1/simbe-ai-website-care\n"
+"POT-Creation-Date: 2026-09-25 18:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: simbe-ai-website-care\n"
+"X-Generator: Simbe Care i18n script\n"
+
+#: includes/class-simbe-care-issues.php:650
+
+msgid " (and %d more)"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:515
+
+msgid "%d inactive theme(s) are installed. Unused code increases the potential attack surface."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:279
+#: includes/class-simbe-care-issues.php:199
+
+msgid "%d plugin(s) have automatic updates enabled."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:87
+
+msgid "%d plugin(s) have critical risk indicators"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:112
+
+msgid "%d plugin(s) need attention"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:193
+
+msgid "1 day"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:190
+
+msgid "1 hour"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:192
+
+msgid "12 hours"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:194
+
+msgid "2 days"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:191
+
+msgid "6 hours"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:47
+#: includes/class-simbe-care-health.php:330
+
+msgid "A backup solution is active"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:106
+
+msgid "A debug.log file exists on your site"
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:165
+#: includes/class-simbe-care-scanner.php:300
+
+msgid "A newer version (%1$s) is available. Update to receive the latest fixes."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:444
+
+msgid "A newer version of WordPress core is available and should be installed."
+msgstr ""
+
+#: includes/class-simbe-care-notifications.php:107
+
+msgid "A scheduled scan of %s found the following new critical issues:"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:577
+
+msgid "A security header is missing or weak"
+msgid_plural "%d security headers are missing or weak"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-simbe-care-admin.php:456
+
+msgid "Active"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:129
+
+msgid "Add define( 'DISALLOW_FILE_EDIT', true ); to wp-config.php."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:585
+
+msgid "Add the missing headers at the server level (e.g. .htaccess, your nginx/Apache config, or a security plugin such as Really Simple SSL)."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:138
+
+msgid "Alert email"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:133
+
+msgid "All plugins show no critical risk indicators"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:213
+
+msgid "All traffic to this site is encrypted."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:643
+
+msgid "An exposed sensitive file was found"
+msgid_plural "%d exposed sensitive files were found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-simbe-care-issues.php:319
+
+msgid "Ask your host to upgrade to PHP 8.1 or newer and test the site afterwards."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:163
+
+msgid "Automatic WordPress core updates are enabled."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:169
+
+msgid "Automatic core updates are disabled"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:148
+
+msgid "Automatic file modifications are enabled"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:130
+
+msgid "Background scan frequency"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:243
+
+msgid "Backup capability detected: %s"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:122
+
+msgid "Check WordPress.org every"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:671
+
+msgid "Check pending"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:499
+
+msgid "Common issues"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:500
+
+msgid "Configuration checks every site should pass."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:539
+
+msgid "Confirm the site responds correctly over HTTP(S) and run the check again."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:150
+
+msgid "Consider adding define( 'DISALLOW_FILE_MODS', true ); and managing deployments via FTP, Git or WP-CLI instead."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:352
+
+msgid "Contact your host to upgrade MySQL/MariaDB to a supported version."
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:257
+
+msgid "Could not reach WordPress.org to check this plugin. It will be re-checked on the next scan."
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:391
+
+msgid "Could not reach WordPress.org to check this theme. It will be re-checked on the next scan."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:629
+#: includes/class-simbe-care-admin.php:687
+
+msgid "Critical"
+msgstr ""
+
+#: includes/class-simbe-care-notifications.php:88
+
+msgid "Critical issue detected."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:274
+
+msgid "DISABLE_WP_CRON is set to true. Scheduled tasks (updates, backups) will only run if a server cron calls wp-cron.php."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:149
+
+msgid "DISALLOW_FILE_MODS is not set, so plugins, themes and core can be modified from the admin area."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:215
+
+msgid "Daily"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:327
+
+msgid "Database"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:360
+
+msgid "Database version %s is supported."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:345
+
+msgid "Database version is outdated"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:77
+
+msgid "Debug mode (WP_DEBUG) is disabled."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:31
+#: includes/class-simbe-care-health.php:196
+
+msgid "Debug mode is disabled"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:187
+#: includes/class-simbe-care-issues.php:83
+
+msgid "Debug mode is enabled"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:518
+
+msgid "Delete themes that are no longer in use from Appearance > Themes."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:471
+
+msgid "Details"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:333
+
+msgid "Detected backup capability: %s"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:108
+
+msgid "Disable WP_DEBUG_LOG in production and remove the debug.log file."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:294
+
+msgid "Enable auto-updates"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:210
+
+msgid "Enable auto-updates for security-sensitive plugins from Plugins > Installed Plugins, or ask your developer to manage plugin auto-updates with a code snippet."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:171
+
+msgid "Enable minor security updates, e.g. define( 'WP_AUTO_UPDATE_CORE', true );"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:142
+
+msgid "File modifications from the admin area are disabled."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:114
+
+msgid "Flag plugins as abandoned after"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:514
+
+msgid "How to fix:"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:85
+
+msgid "In wp-config.php set define( 'WP_DEBUG', false ); for production sites."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:458
+
+msgid "Inactive"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:478
+
+msgid "Increase the limit in wp-config.php: define( 'WP_MEMORY_LIMIT', '256M' );"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:434
+
+msgid "Indicators"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:372
+#: includes/class-simbe-care-admin.php:388
+
+msgid "Indicators are derived from WordPress.org data: directory status, update availability, last activity, and compatibility requirements. For a complete CVE database, consider a dedicated vulnerability scanner (e.g. WPScan)."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:381
+
+msgid "Install an SSL certificate and force HTTPS (e.g. via a security plugin or .htaccess)."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:254
+
+msgid "Install and configure a backup plugin such as UpdraftPlus and verify restore tests periodically."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:298
+
+msgid "Last scanned: %s"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:237
+
+msgid "Leave empty to disable. Separate multiple addresses with a comma. A digest is sent after a scan when new critical plugin or theme issues are found."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:275
+
+msgid "Make sure a real server cron job calls wp-cron.php regularly, otherwise scheduled maintenance will not run."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:176
+
+msgid "Minor core security releases auto-update (WordPress default)."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:686
+
+msgid "Needs attention"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:343
+#: includes/class-simbe-care-issues.php:252
+
+msgid "No backup plugin detected"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:100
+
+msgid "No debug.log file is being written."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:632
+
+msgid "No exposed sensitive files were found."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:492
+
+msgid "No extra themes are installed."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:468
+
+msgid "No issues found"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:253
+
+msgid "No known backup solution is active on this site. Off-site backups are strongly recommended before any update."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:344
+
+msgid "No known backup solution is active. Off-site backups are strongly recommended before any update."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:289
+#: includes/class-simbe-care-issues.php:208
+
+msgid "No plugin auto-updates are enabled"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:376
+
+msgid "No plugin data yet. Run a scan."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:547
+
+msgid "No scan has been run yet."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:392
+
+msgid "No theme data yet. Run a scan."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:506
+
+msgid "No unused themes are installed."
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:201
+
+msgid "No update in over %1$d days (last update: %2$s). The plugin may be abandoned."
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:335
+
+msgid "No update in over %1$d days (last update: %2$s). The theme may be abandoned."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:649
+
+msgid "Not in directory"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:631
+
+msgid "OK"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:566
+
+msgid "Open Simbe Care"
+msgstr ""
+
+#: includes/class-simbe-care-notifications.php:131
+
+msgid "Open Simbe Care: %s"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:322
+
+msgid "PHP"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:157
+#: includes/class-simbe-care-issues.php:290
+
+msgid "PHP %s is supported by the WordPress community."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:665
+
+msgid "PHP requirement not met"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:167
+#: includes/class-simbe-care-issues.php:313
+
+msgid "PHP version is outdated"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:27
+#: includes/class-simbe-care-health.php:154
+
+msgid "PHP version is supported"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:300
+
+msgid "PHP version is unsupported"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:685
+
+msgid "Pass"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:375
+#: includes/class-simbe-care-notifications.php:83
+
+msgid "Plugin"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:127
+
+msgid "Plugin and theme editors are enabled"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:121
+
+msgid "Plugin and theme file editing is disabled."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:43
+#: includes/class-simbe-care-health.php:276
+
+msgid "Plugin auto-updates are enabled"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:291
+
+msgid "Plugin health and common issue checks for WordPress sites."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:66
+
+msgid "Plugin risk scan has not run yet"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:371
+
+msgid "Plugin security scan"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:332
+
+msgid "Plugins"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:290
+#: includes/class-simbe-care-issues.php:209
+
+msgid "Plugins must be updated manually, which can leave known-vulnerable versions active for longer."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:23
+
+msgid "Plugins show no critical risk indicators"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:662
+
+msgid "Possibly abandoned"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:652
+
+msgid "Remove database dumps and debug logs from web-accessible directories and store them outside the document root or in a private backup location."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:646
+
+msgid "Removed from directory"
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:230
+#: includes/class-simbe-care-scanner.php:364
+
+msgid "Requires PHP %1$s, but this site runs PHP %2$s."
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:242
+#: includes/class-simbe-care-scanner.php:376
+
+msgid "Requires WordPress %1$s, but this site runs WordPress %2$s."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:403
+
+msgid "Restrict permissions on wp-config.php (e.g. chmod 400 or 440) after making changes."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:101
+#: includes/class-simbe-care-health.php:125
+
+msgid "Review the plugin health report"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:432
+
+msgid "Risk"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:445
+
+msgid "Run a backup, then update WordPress core from the Updates screen."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:67
+
+msgid "Run a scan from the Simbe Care dashboard to see the first results."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:548
+
+msgid "Run first scan"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:71
+
+msgid "Run plugin scan"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:533
+
+msgid "Save settings"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:87
+
+msgid "Scan complete."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:302
+
+msgid "Scan now"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:107
+
+msgid "Scan settings"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:63
+
+msgid "Scanning…"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:569
+
+msgid "Security headers are present."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:537
+
+msgid "Security headers could not be verified"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:529
+
+msgid "Settings"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:31
+#: includes/class-simbe-care-admin.php:290
+
+msgid "Simbe AI Website Care"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:32
+#: includes/class-simbe-care-health.php:364
+
+msgid "Simbe Care"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:92
+
+msgid "Simbe Care found %1$d critical and %2$d warning(s) across %3$d installed plugin(s) (scanned %4$s)."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:117
+
+msgid "Simbe Care found %1$d plugin warning(s) across %2$d installed plugin(s) (scanned %3$s)."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:136
+
+msgid "Simbe Care found no risk indicators across %1$d installed plugin(s) (scanned %2$s)."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:577
+
+msgid "Simbe Care — Site Health"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:221
+
+msgid "Site is not served over HTTPS"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:35
+#: includes/class-simbe-care-health.php:212
+
+msgid "Site is served over HTTPS"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:433
+
+msgid "Status"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:546
+
+msgid "Strict-Transport-Security (HSTS)"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:688
+
+msgid "Suggestion"
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:217
+#: includes/class-simbe-care-scanner.php:351
+
+msgid "Tested up to WordPress %1$s, but this site runs WordPress %2$s."
+msgstr ""
+
+#: includes/class-simbe-care-scanner.php:174
+#: includes/class-simbe-care-scanner.php:309
+
+msgid "The available update requires PHP %1$s, but this site runs PHP %2$s."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:128
+
+msgid "The built-in file editors let any user who can edit files modify plugin and theme code from the admin area."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:582
+
+msgid "The following security headers were not found: %s."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:538
+
+msgid "The plugin could not reach this site over HTTP to inspect its response headers, so the security headers check was skipped."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:64
+
+msgid "The scan failed. Please try again."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:247
+
+msgid "The web server cannot write to wp-config.php."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:238
+
+msgid "The web server user can modify wp-config.php, which contains database credentials and secret keys."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:402
+
+msgid "The web server user can modify wp-config.php, which contains your database credentials and secret keys."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:107
+
+msgid "The wp-content/debug.log file may contain errors and internal paths that should not be publicly accessible."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:391
+#: includes/class-simbe-care-notifications.php:83
+
+msgid "Theme"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:387
+
+msgid "Theme security scan"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:337
+
+msgid "Themes"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:648
+
+msgid "These files may be publicly accessible and can leak data: %1$s%2$s"
+msgstr ""
+
+#: includes/class-simbe-care-wporg.php:193
+
+msgid "This plugin is not listed in the WordPress.org directory. It may be a premium or custom plugin that cannot be checked automatically."
+msgstr ""
+
+#: includes/class-simbe-care-wporg.php:186
+
+msgid "This plugin was closed and removed from the WordPress.org directory. Closed plugins are often removed for security or guideline reasons."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:379
+
+msgid "This site is not served over HTTPS"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:360
+
+msgid "This site is not served over HTTPS."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:373
+
+msgid "This site is served over HTTPS."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:348
+
+msgid "This site runs %1$s, below the recommended minimum of %2$s."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:170
+#: includes/class-simbe-care-issues.php:316
+
+msgid "This site runs PHP %s, which is older than the recommended 8.1."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:303
+
+msgid "This site runs PHP %s, which no longer receives security fixes."
+msgstr ""
+
+#: includes/class-simbe-care-wporg.php:178
+
+msgid "This theme is not listed in the WordPress.org directory. It may be a premium or custom theme that cannot be checked automatically."
+msgstr ""
+
+#: includes/class-simbe-care-wporg.php:172
+
+msgid "This theme was closed and removed from the WordPress.org directory."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:222
+#: includes/class-simbe-care-issues.php:380
+
+msgid "Traffic between visitors and the site is not encrypted."
+msgstr ""
+
+#: includes/class-simbe-care-wporg.php:158
+
+msgid "Unexpected response from WordPress.org."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:633
+#: includes/class-simbe-care-admin.php:690
+
+msgid "Unknown"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:659
+
+msgid "Untested with your WP version"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:512
+
+msgid "Unused themes are installed"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:654
+
+msgid "Update available (v%s)"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:342
+
+msgid "Updates pending"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:306
+
+msgid "Upgrade PHP to a supported version (8.1 or newer) as soon as possible."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:668
+
+msgid "WP requirement not met"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:273
+
+msgid "WP-Cron is disabled"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:267
+
+msgid "WP-Cron is enabled."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:170
+
+msgid "WP_AUTO_UPDATE_CORE is set to false, so security releases must be installed manually."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:84
+
+msgid "WP_DEBUG is enabled, which can expose sensitive information and slow down production sites."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:188
+
+msgid "WP_DEBUG is enabled, which can expose sensitive information on a live site."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:197
+
+msgid "WP_DEBUG is off, which is correct for production sites."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:475
+
+msgid "WP_MEMORY_LIMIT is set to %s. Complex plugins and page builders may run out of memory."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:630
+
+msgid "Warning"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:216
+
+msgid "Weekly"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:317
+
+msgid "WordPress"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:434
+
+msgid "WordPress %s is up to date."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:173
+
+msgid "WordPress PHP requirements"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:443
+
+msgid "WordPress core update available"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:463
+
+msgid "WordPress memory limit is %s."
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:472
+
+msgid "WordPress memory limit is low"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:78
+
+msgid "You do not have permission to do this."
+msgstr ""
+
+#: includes/class-simbe-care-notifications.php:43
+
+msgid "[%1$s] Simbe Care: %2$d new critical issue(s) found"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:413
+#: includes/class-simbe-care-admin.php:557
+
+msgid "critical"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:180
+
+msgid "days without an update"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:557
+
+msgid "frame protection (X-Frame-Options or CSP frame-ancestors)"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:415
+#: includes/class-simbe-care-admin.php:559
+
+msgid "ok"
+msgstr ""
+
+#: simbe-ai-website-care.php:31
+
+msgid "requires PHP 7.4 or newer. Your site is running an older version, so the plugin has been deactivated."
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:561
+
+msgid "theme critical"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:562
+
+msgid "theme warnings"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:414
+
+msgid "warning"
+msgstr ""
+
+#: includes/class-simbe-care-admin.php:558
+
+msgid "warnings"
+msgstr ""
+
+#: includes/class-simbe-care-issues.php:395
+
+msgid "wp-config.php is not writable."
+msgstr ""
+
+#: includes/class-simbe-care-health.php:39
+#: includes/class-simbe-care-health.php:246
+
+msgid "wp-config.php is protected"
+msgstr ""
+
+#: includes/class-simbe-care-health.php:237
+#: includes/class-simbe-care-issues.php:401
+
+msgid "wp-config.php is writable"
+msgstr ""
+
+#: includes/class-simbe-care-notifications.php:125
+
+msgid "… and more. See the dashboard for the full report."
+msgstr ""
+

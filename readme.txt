@@ -4,9 +4,9 @@ Author: Simbe1
 Author URI: https://profiles.wordpress.org/simbe1/
 Tags: security, monitoring, vulnerabilities, site health, maintenance
 Requires at least: 5.8
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ Optionally set a notification email to receive a digest whenever a scan finds ne
 
 **Common issues checklist**
 
-A guided checklist of the checks every site should pass, including debug mode, file permissions, HTTPS, PHP/database versions, auto-updates, backups, WP-Cron, memory limit and more.
+A guided checklist of the checks every site should pass, including debug mode, file permissions, HTTPS, PHP/database versions, auto-updates, backups, WP-Cron, memory limit, security headers and exposed files.
 
 **Native Site Health integration**
 
@@ -79,6 +79,11 @@ Yes, optionally. In Simbe Care > Settings, add a notification email (separate mu
 
 == Changelog ==
 
+= 1.2.0 =
+* Security headers audit: the checklist now verifies HSTS, X-Content-Type-Options, frame protection (X-Frame-Options or CSP frame-ancestors), Referrer-Policy and Content-Security-Policy headers.
+* Exposed files check: flags publicly readable debug.log files, database dumps (.sql/.sql.gz) and backup copies of wp-config.php.
+* Tested up to WordPress 7.1.
+
 = 1.1.0 =
 * Added theme security scan: every installed theme is now checked against the WordPress.org directory (closed/removed, updates, tested versions, abandoned themes, PHP/WP requirements).
 * Added optional email alerts: a digest is sent after a scan when new critical plugin or theme issues are found.
@@ -91,6 +96,9 @@ Yes, optionally. In Simbe Care > Settings, add a notification email (separate mu
 * Single dashboard page with at-a-glance risk summary and scheduled background scans.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Adds a security headers audit, an exposed files check, and WordPress 7.1 compatibility.
 
 = 1.1.0 =
 Adds theme security scans and optional email alerts for new critical issues.
